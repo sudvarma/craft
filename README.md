@@ -7,8 +7,11 @@
        which needs to be shared later. In such scenarios tracking of settlements becomes a challenge. 
   
 ### Major usecases
+  
   a)    What the user owes to others or vice versa
+  
   b)    Should be able to drill down and understand why the settlement amount is X.
+  
   c)    Should be able to view expenses for an event
 
 
