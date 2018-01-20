@@ -1,8 +1,16 @@
-## Welcome to GitHub Pages
+## Craft - cost sharing app
 
-You can use the [editor on GitHub](https://github.com/sudvarma/craft/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+1.     A single person tends to pay a bill (at a restaurant, etc) when they go out in a group and 
+       they expect to settle the sharing later.
+       
+2.     When a group of people plan for a trip or similar multiple people spend on multiple items the cost of 
+       which needs to be shared later. In such scenarios tracking of settlements becomes a challenge. 
+  
+### Major usecases
+  a)    What the user owes to others or vice versa
+  b)    Should be able to drill down and understand why the settlement amount is X.
+  c)    Should be able to view expenses for an event
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
 
