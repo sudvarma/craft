@@ -6,7 +6,7 @@
 2.     When a group of people plan for a trip or similar multiple people spend on multiple items the cost of 
        which needs to be shared later. In such scenarios tracking of settlements becomes a challenge. 
   
-### Major usecases
+### Major Requirements
   
        a)    What the user owes to others or vice versa
   
@@ -14,7 +14,54 @@
   
        c)    Should be able to view expenses for an event
 
-
+### Usecases
+  
+       a)    Create an event
+  
+       b)    Add users to event
+       
+       c)    User to add spendings
+       
+       d)    Aggregate spending by each user/ total expense
+       
+       e)    Divide the aggregare appropriately across the group
+       
+### Major backend Design Elements
+       
+       -      Event [NEW/ACTIVE/CLEARED]
+       -      User
+       -      Event-User
+       -      Event-User-txn (partitioned across cluster)
+       -      Reports (Partitioned materialized views that could be refreshed at varyiing intervals)
+       -      The EVENTS in CLEARED state, could be moved to document database 
+               _event document containing all details for a given event_
+       
+ ### Exposed REST APIs
+ 
+       -      /events
+                     POST - would create a new event
+                     GET - could return all events
+       
+       -      /events/<eventid>
+                     GET - could return event details
+                     DELETE - could delete the event
+                           
+       -      /events/<eventid>/users
+                     GET - would return all users
+                     POST - would create a new user
+                   
+        -     /events/<eventid>/users/<userid>
+                     GET - would get user details for the given event
+                     DELETE - could delete the user from the given event
+                     
+         -    /events/<eventid>/users/<userid>/txns
+                     GET - would get details of event/user txn
+                     POST - would add amount to event/user txn
+                     DELETE - would create a new entry in event/user/txn with negative amount
+                     
+          -   /events/<eventid>/users/txns
+                     GET - would get txn details for the given <event id>
+       
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
