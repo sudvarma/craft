@@ -8,11 +8,11 @@
   
 ### Major usecases
   
-  a)    What the user owes to others or vice versa
+       a)    What the user owes to others or vice versa
   
-  b)    Should be able to drill down and understand why the settlement amount is X.
+       b)    Should be able to drill down and understand why the settlement amount is X.
   
-  c)    Should be able to view expenses for an event
+       c)    Should be able to view expenses for an event
 
 
 ### Markdown
