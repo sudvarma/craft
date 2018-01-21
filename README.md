@@ -67,6 +67,10 @@
                      PUT - calculates, settlement of accounts w.r.t event-users. 
                      Populates event_user_settle table with details.
        
+### Backend Design Elements       
+
+
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
