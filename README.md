@@ -44,7 +44,8 @@
                      GET - could return all events
        
        -      /events/<eventid>
-                     GET - could return event details
+                     GET - could return event details (with/without txn details)
+                     PUT - calculates, settlement of accounts w.r.t event-users.
                      DELETE - could delete the event
                            
        -      /events/<eventid>/users
@@ -59,10 +60,10 @@
                      GET - would get details of event/user txn
                      POST - would add amount to event/user txn
                      
-          -   /events/<eventid>/users/txns
+          -   /events/<eventid>/txns (same as get of event with txn details)
                      GET - would get txn details for the given <event id>
                      
-           -  /events/<eventid>/settle
+           -  /events/<eventid>/settle (same as put of event)
                      PUT - calculates, settlement of accounts w.r.t event-users. 
                      Populates event_user_settle table with details.
        
