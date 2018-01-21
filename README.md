@@ -26,17 +26,18 @@
        
        e)    Divide the aggregare appropriately across the group
        
-### Major backend Design Elements
+### High-level backend Design Elements
        
-       -      Event [NEW/ACTIVE/CLEARED]
+       -      Event [NEW/ACTIVE/SETTLEMENT/CLEARED]
        -      User
        -      Event-User
        -      Event-User-txn (partitioned across cluster)
-       -      Reports (Partitioned materialized views that could be refreshed at varyiing intervals)
+       -      Event-User-settle
+       -      Reports (Partitioned materialized views that could be refreshed at varying intervals)
        -      The EVENTS in CLEARED state, could be moved to document database 
                _event document containing all details for a given event_
        
- ### Exposed REST APIs
+ ### High-level REST APIs
  
        -      /events
                      POST - would create a new event
@@ -57,10 +58,13 @@
          -    /events/<eventid>/users/<userid>/txns
                      GET - would get details of event/user txn
                      POST - would add amount to event/user txn
-                     DELETE - would create a new entry in event/user/txn with negative amount
                      
           -   /events/<eventid>/users/txns
                      GET - would get txn details for the given <event id>
+                     
+           -  /events/<eventid>/settle
+                     PUT - calculates, settlement of accounts w.r.t event-users. 
+                     Populates event_user_settle table with details.
        
 ### Markdown
 
