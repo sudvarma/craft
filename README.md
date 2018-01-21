@@ -69,7 +69,7 @@
        
 ### Backend Design Elements       
 
-
+ ![Image](craft/er_craft.png)
 
 ### Markdown
 
