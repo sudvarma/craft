@@ -69,7 +69,7 @@
        
 ### Backend Design Elements       
 
- ![](craft/er_craft.png)
+ ![](https://github.com/sudvarma/craft/blob/master/er_craft.png)
 
 ### Markdown
 
