@@ -75,8 +75,8 @@
 
 ### Implementation Details
     
-    ## Settlement Process
-    ![](https://github.com/sudvarma/craft/blob/master/SettlementStep.png)
+   ## Settlement Process
+   ![](https://github.com/sudvarma/craft/blob/master/SettlementStep.png)
     
 ### Enhancements
        
