@@ -73,9 +73,10 @@
 
 ### High level Class & Design
 
-### Implementation Details
+### Settlement Process
+   
+   The focus is in reducing the number of transactions.Below is an example settlement process:-
     
-   ## Settlement Process
    ![](https://github.com/sudvarma/craft/blob/master/SettlementStep.png)
     
 ### Enhancements
