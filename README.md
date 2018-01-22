@@ -88,5 +88,6 @@
     
 ### Enhancements
        
-   -   Provide provision to transfer money from the app
-   -   Public profile of user based on spending/return policies
+   -  Provide provision to transfer money from the app
+   -  Public profile of user based on spending/return policies
+   -  Could include provision for ads/recommendation for additional monetization options
