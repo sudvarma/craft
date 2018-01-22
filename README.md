@@ -77,7 +77,7 @@
    
    The focus is in reducing the number of transactions.Below is an example settlement process:-
     
-   ![](https://github.com/sudvarma/craft/blob/master/SettlementStep.png)
+   ![](https://github.com/sudvarma/craft/blob/master/SettlementStep2.png)
     
 ### Enhancements
        
