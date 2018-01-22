@@ -66,10 +66,17 @@
            -  /events/<eventid>/settle (same as put of event)
                      PUT - calculates, settlement of accounts w.r.t event-users. 
                      Populates event_user_settle table with details.
+                    
+            Note: All the APIs are stateless hence can horizontally scale across the cluster
        
 ### Backend Design Elements       
 
  ![](https://github.com/sudvarma/craft/blob/master/er_craft.png)
+ 
+ - event user txn table is going to be largest table and has to be partioned and should be made append only - no updates
+ - event_user_spend_summary materialized view would give summary of money spend by each user for an event.
+   It could be refresh offline or per request from the txn table and need not be done for each txn.
+ - user_profile could be another materialized view that tracks all user spending/payout. Refreshed once in a day max. 
 
 ### High level Class & Design
 
