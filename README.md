@@ -77,8 +77,14 @@
  - event_user_spend_summary materialized view would give summary of money spend by each user for an event.
    It could be refresh offline or per request from the txn table and need not be done for each txn.
  - user_profile could be another materialized view that tracks all user spending/payout. Refreshed once in a day max. 
+ - Schema DDL(https://github.com/sudvarma/craft/blob/master/event_db_script.txt)
 
 ### High level Class & Design
+
+- All RestAPIs would call the event service class.
+- Event Service class interacts to the implementation using a proxy 
+- All implementation classes extend highlevel interface like the Event, User
+- The implementation class to access the database using DAO layer.
 
 ### Settlement Process
    
