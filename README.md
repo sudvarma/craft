@@ -82,7 +82,7 @@
 ### High level Class & Design
 
 - All RestAPIs would call the event service class.
-- Event Service class interacts to the implementation using a proxy 
+- Event Service class interacts to the implementation using a facade 
 - All implementation classes extend highlevel interface like the Event, User
 - The implementation class to access the database using DAO layer.
 
