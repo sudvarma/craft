@@ -11,7 +11,7 @@ import javax.ws.rs.Produces;
 public class EventDetailsSvc {
 	
 	@GET
-	@Produces("text/html; charset=utf-8")
+	@Produces("application/json; charset=utf-8")
 	public String getEventDetails(@PathParam("eventid") String eventid)
 	{
 		System.out.println("Inside getEventDetails eventid " + eventid);
