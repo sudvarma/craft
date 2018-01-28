@@ -2,23 +2,25 @@ package com.craft.dao;
 
 import com.craft.core.CraftConstants;
 import com.craft.core.CraftCtxt;
-import com.craft.persist.Storage;
+import com.craft.persist.EventStorage;
+import com.craft.persist.UserStorage;
+import com.craft.persist.UserTxnStorage;
 
 public abstract class BaseDAO {
 	
-	public Storage getEventStorage()
+	public EventStorage getEventStorage()
 	{
-		return CraftCtxt.getInstance().getStorage(CraftConstants.EVENT_STORAGE);
+		return (EventStorage) CraftCtxt.getInstance().getStorage(CraftConstants.EVENT_STORAGE);
 	}		
 
-	public Storage geUserStorage()
+	public UserStorage getUserStorage()
 	{
-		return CraftCtxt.getInstance().getStorage(CraftConstants.USER_STORAGE);
+		return (UserStorage) CraftCtxt.getInstance().getStorage(CraftConstants.USER_STORAGE);
 	}		
 
-	public Storage getUserTxnStorage()
+	public UserTxnStorage getUserTxnStorage()
 	{
-		return CraftCtxt.getInstance().getStorage(CraftConstants.USER_TXN_STORAGE);
+		return (UserTxnStorage) CraftCtxt.getInstance().getStorage(CraftConstants.USER_TXN_STORAGE);
 	}		
 	
 }

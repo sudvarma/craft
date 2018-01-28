@@ -13,7 +13,8 @@ public class UserStorage implements Storage
 	
 	public void addUser(Long id, User u)
 	{
-		usersList.put(id,u);
+		if(!usersList.containsKey(id))
+			usersList.put(id,u);
 	}
 
 	public User getUser(Long id)

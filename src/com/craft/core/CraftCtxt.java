@@ -1,10 +1,7 @@
 package com.craft.core;
 
-import java.sql.SQLException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
-import javax.naming.NamingException;
 
 import com.craft.persist.EventStorage;
 import com.craft.persist.Storage;
